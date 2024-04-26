@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export function NavBar() {
   return (
-    <nav className="border-b py-4 px-8 flex gap-16 items-end">
+    <nav className="font-mono border-b py-4 px-8 flex gap-16 items-end">
       <Link href="/">
-        <h1 className="font-thin text-4xl">Danny</h1>
+        <h1 className="text-4xl">Danny &#128075;</h1>
       </Link>
-      <ul className="flex gap-8 font-mono">
+      <ul className="flex gap-8">
         {LINKS.map((link) => (
           <Link key={link} href={`/${link}`}>
             {link}
