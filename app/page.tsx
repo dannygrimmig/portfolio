@@ -79,7 +79,7 @@ type ButtonProps = {
   type: "primary" | "secondary";
   text: string;
 };
-export function Button(props: ButtonProps) {
+function Button(props: ButtonProps) {
   const { type, text } = props;
 
   return (
