@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function NavBar() {
   return (
-    <nav className="font-mono border-b py-4 px-8 flex gap-16 items-end">
+    <nav className="font-mono sticky top-0 bg-white border-b py-4 px-8 flex gap-16 items-end">
       <Link href="/">
         <h1 className="text-4xl font-thin">Danny&#128075;</h1>
       </Link>
