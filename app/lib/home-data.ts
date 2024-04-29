@@ -1,4 +1,13 @@
-export const CATEGORYS = [
+export type Category = {
+  key: string;
+  image: string;
+  text: string;
+  company: string;
+  subhead: string;
+  positions?: string[];
+};
+
+export const CATEGORYS: Category[] = [
   {
     key: "main",
     image:
