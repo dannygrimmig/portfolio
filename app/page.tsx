@@ -1,14 +1,14 @@
 "use client";
 
 import * as React from "react";
-import { CATEGORYS, Category } from "./lib/home-data";
+import { CATEGORYS, CATEGORY_MAP, Category } from "./lib/home-data";
 import { CategoryButton } from "./ui/buttons";
 import { RightSplit, SplitPage } from "./ui/splitpage";
 
 export default function Home() {
   // managed
   const [currentCategory, setCurrentCategory] = React.useState(
-    CATEGORYS.find((category) => category.key === "main")
+    CATEGORY_MAP.main
   );
 
   return (
@@ -25,7 +25,6 @@ export default function Home() {
           text={currentCategory?.text || ""}
           badges={[
             {
-              key: "fe",
               text: "Frontend Engineer",
               color: "bg-sky-200",
             },
