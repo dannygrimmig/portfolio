@@ -8,29 +8,31 @@ export function Badge(props: BadgeProps) {
   const { text, color = "bg-sky-200", className = "" } = props;
 
   return (
-    <p className={`px-4 py-2 rounded-full w-max ${color} ${className}`}>
+    <p
+      className={`px-4 py-2 rounded-full border border-black w-max ${color} ${className}`}
+    >
       {text}
     </p>
   );
 }
 const REACT_BADGE: BadgeProps = {
   text: "React",
-  color: "bg-sky-200",
+  color: "bg-sky-300",
 };
 
 const TS_BADGE: BadgeProps = {
   text: "Typescript",
-  color: "bg-sky-400",
+  color: "bg-sky-500",
 };
 
 const HTML_BADGE: BadgeProps = {
   text: "HTML",
-  color: "bg-sky-200",
+  color: "bg-sky-600",
 };
 
 const CSS_BADGE: BadgeProps = {
   text: "Tailwind CSS",
-  color: "bg-sky-400",
+  color: "bg-sky-700",
 };
 
 const JS_BADGE: BadgeProps = {

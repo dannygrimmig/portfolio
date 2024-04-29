@@ -14,7 +14,7 @@ export function SplitPage(props: SplitPageProps) {
     <main className="sm:grid grid-cols-5 min-h-[calc(100vh-74px)]">
       <div className="sm:col-span-3 border-r">{left}</div>
 
-      <div className="sm:col-span-2 px-4 pt-8">{right}</div>
+      <div className="sm:col-span-2 px-4 pt-8 bg-sky-100">{right}</div>
     </main>
   );
 }

@@ -44,7 +44,7 @@ function Left(props: LeftProps) {
   const { category, onCategoryChange } = props;
   return (
     <div className="w-full h-full p-16 flex flex-col-reverse md:grid md:grid-cols-10 gap-4">
-      <div className="col-span-2 flex md:flex-col items-end gap-4">
+      <div className="col-span-3 flex flex-wrap justify-end gap-4 h-max">
         {CATEGORYS.map((category) => (
           <CategoryButton
             key={category.key}
@@ -54,12 +54,12 @@ function Left(props: LeftProps) {
         ))}
       </div>
 
-      <div className="col-span-8 bg-slate-100 p-2 sm:p-4 md:p-8 rounded-lg h-[500px] flex flex-col ">
-        <div className="flex-1 h-5/6 self-center place-self-center">
+      <div className="col-span-7 p-2 max-h-[500px]">
+        <div className="h-5/6 mb-4">
           <img src={category?.image} className="rounded-lg object-fit h-full" />
         </div>
 
-        <div className="flex-1 content-end font-mono">
+        <div>
           <h3 className="font-bold">{category?.company}</h3>
           <p>{category?.subhead}</p>
           {category?.positions?.map((position, i) => (

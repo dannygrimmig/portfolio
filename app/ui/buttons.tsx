@@ -8,7 +8,7 @@ export function Button(props: ButtonProps) {
 
   return (
     <h3
-      className={`px-6 py-3 rounded-md border w-max ${
+      className={`px-6 py-3 rounded-md border border-black w-max ${
         type === "primary" && "bg-sky-600 text-white"
       }`}
     >
@@ -30,7 +30,7 @@ export function CategoryButton(props: CategoryButtonProps) {
       type="button"
       onClick={onClick}
       key={key}
-      className="rounded-md p-4 bg-slate-100 h-24 w-24 flex justify-center items-center"
+      className="rounded-md p-4 bg-sky-50 h-24 w-24 flex justify-center items-center"
     >
       <img src={image} className="rounded-md" />
     </button>
