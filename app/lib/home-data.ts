@@ -12,7 +12,7 @@ type CATEGORY_TYPES = "main" | "colgate" | "toast";
 const MAIN_CATEGORY: Category = {
   key: "main",
   image:
-    "https://lh3.googleusercontent.com/a/ACg8ocJNMLmcmCb85fXFYSqaz75U4uz2-JloN5xNO4-AtrPVu4FWvk_c5: Categoryg=s576-c-no",
+    "https://media.licdn.com/dms/image/D4E03AQEN2dChHQZJtQ/profile-displayphoto-shrink_800_800/0/1704128348334?e=1720051200&v=beta&t=Uil2CnH35ICr7VVQfY4jadyhtfkazt2UyQH0TUWECnI",
   text: "Hi! Here is a quick site about me. Threw together a bit about my background, including my education at Colgate and professional experience as a Software Developer at Toast",
   company: "Danny Grimmig",
   subhead: "Click through to learn more!",
