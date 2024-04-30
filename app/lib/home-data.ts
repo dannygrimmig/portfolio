@@ -1,47 +1,38 @@
-export type Category = {
-  key: string;
-  image: string;
-  text: string;
-  company: string;
-  subhead: string;
-  positions?: string[];
-};
-
 type CATEGORY_TYPES = "main" | "colgate" | "toast";
+
+export type Category = {
+  key: CATEGORY_TYPES;
+  title: string;
+  subhead: string;
+  image: string;
+  text?: string;
+};
 
 const MAIN_CATEGORY: Category = {
   key: "main",
+  title: "Danny Grimmig",
+  subhead: "",
   image:
     "https://media.licdn.com/dms/image/D4E03AQEN2dChHQZJtQ/profile-displayphoto-shrink_800_800/0/1704128348334?e=1720051200&v=beta&t=Uil2CnH35ICr7VVQfY4jadyhtfkazt2UyQH0TUWECnI",
-  text: "Hi! Here is a quick site about me. Threw together a bit about my background, including my education at Colgate and professional experience as a Software Developer at Toast",
-  company: "Danny Grimmig",
-  subhead: "Click through to learn more!",
+  text: "Hello! Welcome to a quick site where I threw together a little about me, including my experience and projects!",
 };
 
 const COLGATE_CATEGORY: Category = {
   key: "colgate",
-  image:
-    "https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/Colgate_University_Seal_2018.svg/1200px-Colgate_University_Seal_2018.svg.png",
-  text: "I studied Computer Science and Economics at Colgate University. Should put some more information in here too not sure what else to say for now",
-  company: "Colgate University",
-  subhead: "Computer Science and Economics",
-  positions: ["CS Teaching Assistant"],
+  title: "Colgate University",
+  subhead: "Computer Science & Economics",
+  image: "https://images.shiksha.com/mediadata/images/1550145379phpIpgSMg.jpeg",
+  text: "At Colgate University, I studied both Computer Science and Economics. Addtionally as a Computer Science Teaching assistant, I was able to foster a collaborative environment and learn from my peers.",
 };
 
 const TOAST_CATEGORY: Category = {
   key: "toast",
-  image: "https://asset.brandfetch.io/idJCbAfjvP/id3Te8U8w0.png",
-  text: "During my tenure at Toast, I transitioned from an engineering intern to a full-time software engineer, spearheading projects including product education pages, accesible component libraries, and designing and building the prospective e-commerce flow.",
-  company: "Toast, Inc.",
-  subhead: "eCommerce Engineering Team",
-  positions: ["Engineering Intern", "Frontend Software Engineer"],
+  title: "Toast, Inc",
+  subhead: "Software Engineer",
+  image:
+    "https://d2w1ef2ao9g8r9.cloudfront.net/images/_sameSizeHero/20230921_toast_1243-Edit-600x400-9801ebf_2023-11-15-021358_vhci.png",
+  text: "I joined the eCommerce Engineering team as an Engineering Intern, before progressing to a full-time Frontend Software Engineer postiion. I had the exciting opportunity to spearhead customer facing initiatives, including product education pages, component librarys, and scaffolding new eCommerce flows.",
 };
-
-export const CATEGORYS: Category[] = [
-  MAIN_CATEGORY,
-  COLGATE_CATEGORY,
-  TOAST_CATEGORY,
-];
 
 export const CATEGORY_MAP: Record<CATEGORY_TYPES, Category> = {
   main: MAIN_CATEGORY,

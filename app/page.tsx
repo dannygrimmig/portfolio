@@ -1,8 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { CATEGORYS, CATEGORY_MAP, Category } from "./lib/home-data";
-import { CategoryButton } from "./ui/buttons";
+import { CATEGORY_MAP, Category } from "./lib/home-data";
 import { RightSplit, SplitPage } from "./ui/splitpage";
 
 export default function Home() {
@@ -15,7 +14,7 @@ export default function Home() {
     <SplitPage
       left={
         <Left
-          category={currentCategory}
+          activeCategory={currentCategory}
           onCategoryChange={(category) => setCurrentCategory(category)}
         />
       }
@@ -36,37 +35,65 @@ export default function Home() {
 }
 
 type LeftProps = {
-  category: Category;
+  activeCategory: Category;
   onCategoryChange: (category: Category) => void;
 };
 
 function Left(props: LeftProps) {
-  const { category, onCategoryChange } = props;
+  const { activeCategory, onCategoryChange } = props;
   return (
-    <div className="w-full h-full sm:p-12 flex flex-col-reverse pb-4 md:grid md:grid-cols-10 gap-4">
-      <div className="md:col-span-2 lg:col-span-4 flex flex-wrap justify-end gap-4 h-max">
-        {CATEGORYS.map((category) => (
-          <CategoryButton
-            key={category.key}
-            image={category.image}
-            onClick={() => onCategoryChange(category)}
-          />
-        ))}
-      </div>
-
-      <div className="md:col-span-8 lg:col-span-6 p-2 sm:p-4">
-        <div className="mb-4 sm:p-4">
-          <img src={category?.image} className="rounded-lg object-fit h-full" />
-        </div>
-
-        <div>
-          <h3 className="font-bold">{category?.company}</h3>
-          <p>{category?.subhead}</p>
-          {category?.positions?.map((position, i) => (
-            <li key={i}>{position}</li>
-          ))}
-        </div>
-      </div>
+    <div className="w-full min-h-full grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 p-4 gap-4">
+      <Container
+        isActive={activeCategory.key === "main"}
+        className="col-span-1 md:row-span-2 bg-sky-300"
+        onClick={() => onCategoryChange(CATEGORY_MAP.main)}
+        category={CATEGORY_MAP.main}
+      />
+      <Container
+        isActive={activeCategory.key === "colgate"}
+        className="bg-sky-500"
+        onClick={() => onCategoryChange(CATEGORY_MAP.colgate)}
+        category={CATEGORY_MAP.colgate}
+      />
+      <Container
+        isActive={activeCategory.key === "toast"}
+        className="bg-sky-700"
+        onClick={() => onCategoryChange(CATEGORY_MAP.toast)}
+        category={CATEGORY_MAP.toast}
+      />
     </div>
+  );
+}
+
+type ContainerProps = {
+  isActive: boolean;
+  className: string;
+  onClick: () => void;
+  category?: Category;
+};
+
+function Container(props: ContainerProps) {
+  const { isActive, className, onClick, category } = props;
+
+  return (
+    <button
+      onClick={onClick}
+      className={`relative text-left rounded ${className} ${
+        isActive && "border-2 border-black"
+      }`}
+    >
+      <img
+        src={category?.image}
+        alt=""
+        className="object-cover h-full rounded"
+      />
+
+      {!!category && (
+        <div className="absolute bottom-2 left-2 text-white">
+          <h2 className="text-xl font-bold">{category.title}</h2>
+          <p>{category.subhead}</p>
+        </div>
+      )}
+    </button>
   );
 }

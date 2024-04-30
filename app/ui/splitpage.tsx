@@ -28,7 +28,7 @@ type RightSplit = {
 export function RightSplit(props: RightSplit) {
   const { title, badges = [], text } = props;
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-12 sticky top-[104px]">
       <div className="flex flex-col gap-6">
         <ul className="flex gap-2 justify-end flex-wrap">
           {badges.map((badge: BadgeProps, i) => (
