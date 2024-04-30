@@ -15,6 +15,32 @@ export function Badge(props: BadgeProps) {
     </p>
   );
 }
+
+const FRONTEND_BADGE: BadgeProps = {
+  text: "Frontend Engineer",
+  color: "bg-sky-300",
+};
+
+const QA_BADGE: BadgeProps = {
+  text: "QA Engineer Intern",
+  color: "bg-orange-400",
+};
+
+const CS_BADGE: BadgeProps = {
+  text: "CS Major",
+  color: "bg-red-500",
+};
+
+const ECON_BADGE: BadgeProps = {
+  text: "Econ Minor",
+  color: "bg-green-300",
+};
+
+const TA_BADGE: BadgeProps = {
+  text: "Teaching Assistant",
+  color: "bg-sky-400",
+};
+
 const REACT_BADGE: BadgeProps = {
   text: "React",
   color: "bg-sky-300",
@@ -40,9 +66,24 @@ const JS_BADGE: BadgeProps = {
   color: "bg-sky-600",
 };
 
-type BADGES = "react" | "ts" | "html" | "css" | "js";
+type BADGES =
+  | "fe"
+  | "qa"
+  | "cs"
+  | "econ"
+  | "ta"
+  | "react"
+  | "ts"
+  | "html"
+  | "css"
+  | "js";
 
 export const BADGE_MAP: Record<BADGES, BadgeProps> = {
+  fe: FRONTEND_BADGE,
+  qa: QA_BADGE,
+  cs: CS_BADGE,
+  econ: ECON_BADGE,
+  ta: TA_BADGE,
   react: REACT_BADGE,
   ts: TS_BADGE,
   html: HTML_BADGE,

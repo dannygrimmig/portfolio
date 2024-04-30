@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function NavBar() {
   return (
-    <nav className="z-10 font-mono sticky top-0 bg-white border-b py-4 px-2 sm:px-8 flex gap-16 items-end">
+    <nav className="z-10 font-mono sticky top-0 bg-white border-b border-black py-4 px-2 sm:px-8 flex gap-16 items-end">
       <Link href="/">
         <h1 className="text-4xl">Danny&#128075;</h1>
       </Link>
@@ -17,4 +17,4 @@ export function NavBar() {
   );
 }
 
-const LINKS = ["portfolio", "blog"];
+const LINKS = ["portfolio"];

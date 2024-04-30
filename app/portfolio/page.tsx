@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Portfolio() {
   return (
     <SplitPage
-      left={<div>My Portfolio Here!</div>}
+      left={<div className="p-16">Coming soon...</div>}
       right={
         <RightSplit
           title="My Portfolio"
