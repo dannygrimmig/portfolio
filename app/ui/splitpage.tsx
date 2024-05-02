@@ -20,13 +20,14 @@ export function SplitPage(props: SplitPageProps) {
 }
 
 type RightSplit = {
-  title: string;
-  text: string;
+  title?: string;
+  text?: string;
   badges?: BadgeProps[];
+  link?: string;
 };
 
 export function RightSplit(props: RightSplit) {
-  const { title, badges = [], text } = props;
+  const { title = "", badges = [], text = "", link } = props;
   return (
     <div className="flex flex-col gap-12 sticky top-[104px]">
       <div className="flex flex-col gap-6">
@@ -47,8 +48,8 @@ export function RightSplit(props: RightSplit) {
       <Typewriter text={text} />
 
       <div className="flex gap-2">
-        <Link href="/portfolio">
-          <Button type="primary" text="portfolio" />
+        <Link href={link ?? "/portfolio"} rel="norefferer noopener">
+          <Button type="primary" text={link ? "Check it out!" : "portfolio"} />
         </Link>
       </div>
     </div>

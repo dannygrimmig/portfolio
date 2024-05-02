@@ -1,31 +1,26 @@
-import { BADGE_MAP, BadgeProps } from "../ui/badges";
+import { BADGE_MAP } from "../ui/badges";
+import profileimage from "../../public/profile.png";
+import colgateimage from "../../public/colgate-image.jpeg";
+import toastimage from "../../public/toast-image.png";
+import { Category } from "./categories";
 
-type CATEGORY_TYPES = "main" | "colgate" | "toast";
-
-export type Category = {
-  key: CATEGORY_TYPES;
-  title: string;
-  subhead: string;
-  image: string;
-  text?: string;
-  badges: BadgeProps[];
-};
+export type HOME_CATEGORY = "main" | "colgate" | "toast";
 
 const MAIN_CATEGORY: Category = {
   key: "main",
   title: "Danny Grimmig",
   subhead: "",
-  image:
-    "https://media.licdn.com/dms/image/D4E03AQEN2dChHQZJtQ/profile-displayphoto-shrink_800_800/0/1704128348334?e=1720051200&v=beta&t=Uil2CnH35ICr7VVQfY4jadyhtfkazt2UyQH0TUWECnI",
+  image: profileimage,
   text: "Hello! Welcome to a quick site where I threw together a little about me, including my experience and projects!",
-  badges: [BADGE_MAP.fe],
+  badges: [BADGE_MAP.software],
+  className: "col-span-1 md:row-span-2",
 };
 
 const COLGATE_CATEGORY: Category = {
   key: "colgate",
   title: "Colgate University",
   subhead: "Computer Science & Economics",
-  image: "https://images.shiksha.com/mediadata/images/1550145379phpIpgSMg.jpeg",
+  image: colgateimage,
   text: "At Colgate University, I studied both Computer Science and Economics. Addtionally as a Computer Science Teaching assistant, I was able to foster a collaborative environment and learn from my peers.",
   badges: [BADGE_MAP.cs, BADGE_MAP.econ, BADGE_MAP.ta],
 };
@@ -34,14 +29,19 @@ const TOAST_CATEGORY: Category = {
   key: "toast",
   title: "Toast, Inc",
   subhead: "Software Engineer",
-  image:
-    "https://d2w1ef2ao9g8r9.cloudfront.net/images/_sameSizeHero/20230921_toast_1243-Edit-600x400-9801ebf_2023-11-15-021358_vhci.png",
+  image: toastimage,
   text: "I joined the eCommerce Engineering team as an Engineering Intern, before progressing to a full-time Frontend Software Engineer postiion. I had the exciting opportunity to spearhead customer facing initiatives, including product education pages, component librarys, and scaffolding new eCommerce flows.",
   badges: [BADGE_MAP.qa, BADGE_MAP.fe],
 };
 
-export const CATEGORY_MAP: Record<CATEGORY_TYPES, Category> = {
+export const HOME_CATEGORIES_MAP: Record<HOME_CATEGORY, Category> = {
   main: MAIN_CATEGORY,
   colgate: COLGATE_CATEGORY,
   toast: TOAST_CATEGORY,
 };
+
+export const HOME_CATEGORIES = [
+  MAIN_CATEGORY,
+  COLGATE_CATEGORY,
+  TOAST_CATEGORY,
+];
