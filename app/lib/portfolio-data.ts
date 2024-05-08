@@ -5,7 +5,7 @@ import prospectimage from "../../public/prospect-migration.png";
 import movieimage from "../../public/movie-graph.png";
 import componentimage from "../../public/component-image.webp";
 import financeimage from "../../public/financial-portfolio.png";
-import emptyimage from "../../public/elementor-placeholder-image.webp";
+import workoutimage from "../../public/workout-app.png";
 import { Category } from "./categories";
 
 export type PORTFOLIO_PROJECT =
@@ -13,6 +13,7 @@ export type PORTFOLIO_PROJECT =
   | "component"
   | "prospect"
   | "feed"
+  | "workout"
   | "finance"
   | "movie";
 
@@ -75,6 +76,16 @@ const FEED_DEVELOPMENT: Category = {
   link: "https://feed-development.web.app/",
 };
 
+const WORKOUT_APP: Category = {
+  key: "workout",
+  title: "The Logs",
+  subhead: "Full Stack Workout Tracker",
+  image: workoutimage,
+  text: "Current Project! Working on a full stack workout tracking app using Next.JS and PostgreSQL. The end goal is for authentication, post workouts, view historic workouts, and see data analytics on your progression.",
+  badges: [BADGE_MAP.react, BADGE_MAP.ts, BADGE_MAP.next, BADGE_MAP.postgresql],
+  imageBadge: BADGE_MAP.personal,
+};
+
 const FINANCIAL_PORTFOLIO: Category = {
   key: "finance",
   title: "Financial Portfolio",
@@ -108,6 +119,7 @@ export const PORTFOLIO_MAP: Record<PORTFOLIO_PROJECT, Category> = {
   component: COMPONENT_LIB,
   prospect: PROSPECT_MIGRATION,
   feed: FEED_DEVELOPMENT,
+  workout: WORKOUT_APP,
   finance: FINANCIAL_PORTFOLIO,
   movie: MOVIE_GRAPH,
 };
@@ -117,6 +129,7 @@ export const PORTFOLIO_PROJECTS = [
   COMPONENT_LIB,
   PROSPECT_MIGRATION,
   FEED_DEVELOPMENT,
+  WORKOUT_APP,
   FINANCIAL_PORTFOLIO,
   MOVIE_GRAPH,
 ];

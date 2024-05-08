@@ -135,6 +135,16 @@ const LOCAL_STORAGE_BADGE: BadgeProps = {
   color: "bg-orange-400",
 };
 
+const NEXT_BADGE: BadgeProps = {
+  text: "Next JS",
+  color: "bg-slate-200",
+};
+
+const POSTGRESQL_BADGE: BadgeProps = {
+  text: "PostgreSQL",
+  color: "bg-orange-300",
+};
+
 type BADGES =
   | "toast"
   | "software"
@@ -159,7 +169,9 @@ type BADGES =
   | "nosql"
   | "auth"
   | "localstorage"
-  | "context";
+  | "context"
+  | "next"
+  | "postgresql";
 
 export const BADGE_MAP: Record<BADGES, BadgeProps> = {
   toast: TOAST_BADGE,
@@ -186,4 +198,6 @@ export const BADGE_MAP: Record<BADGES, BadgeProps> = {
   auth: AUTH_BADGE,
   localstorage: LOCAL_STORAGE_BADGE,
   context: CONTEXT_API_BADGE,
+  next: NEXT_BADGE,
+  postgresql: POSTGRESQL_BADGE,
 };
