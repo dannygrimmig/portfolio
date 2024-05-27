@@ -84,6 +84,7 @@ const WORKOUT_APP: Category = {
   text: "Current Project! Working on a full stack workout tracking app using Next.JS and PostgreSQL. The end goal is for authentication, post workouts, view historic workouts, and see data analytics on your progression.",
   badges: [BADGE_MAP.react, BADGE_MAP.ts, BADGE_MAP.next, BADGE_MAP.postgresql],
   imageBadge: BADGE_MAP.personal,
+  link: "https://workout-app-one-self.vercel.app/",
 };
 
 const FINANCIAL_PORTFOLIO: Category = {
