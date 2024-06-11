@@ -3,7 +3,7 @@ import feedimage from "../../public/images/portfolio/feed-app.png";
 import eduimage from "../../public/images/portfolio/edu-page.png";
 import prospectimage from "../../public/images/portfolio/prospect-migration.png";
 import movieimage from "../../public/images/portfolio/movie-graph.png";
-import storybook from "../../public/images/portfolio/storybook.png";
+import storybook from "../../public/images/portfolio/storybook_components.png";
 import financeimage from "../../public/images/portfolio/financial-portfolio.png";
 import workoutimage from "../../public/images/portfolio/workout-app.png";
 import { Category } from "./definitions";
