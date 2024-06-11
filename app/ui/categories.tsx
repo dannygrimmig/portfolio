@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Badge } from "./badges";
-import { Category } from "../lib/categories";
+import { Category } from "../lib/definitions";
 import emptyimage from "../../public/elementor-placeholder-image.webp";
 
 type CategoryGridProps = {
@@ -62,14 +62,16 @@ function CategoryCard(props: CategoryCardProps) {
       onClick={onClick}
       className={`relative p-4 text-left ${
         isPrimaryCard ? "min-h-60" : "min-h-80"
-      } ${className} ${isActive && "border-4 border-black rounded"}`}
+      } ${className} ${
+        isActive && "border border-black shadow-black shadow-[2px_2px]"
+      }`}
     >
       <div className={`${!isPrimaryCard && "relative h-3/4 mb-2"}`}>
         <Image
           src={category.image ?? emptyimage}
           alt=""
           fill
-          className="object-cover object-middle"
+          className="object-cover sm:object-bottom"
           blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
           placeholder="blur"
         />
@@ -85,7 +87,11 @@ function CategoryCard(props: CategoryCardProps) {
             />
           )}
 
-          <div className={`${isPrimaryCard && "absolute bottom-2 left-2"}`}>
+          <div
+            className={`${
+              isPrimaryCard && "absolute bottom-2 left-2"
+            } px-2 py-1 backdrop-blur-[2px] border border-black shadow-black shadow-[2px_2px]`}
+          >
             <h2 className="text-xl font-bold">{category.title}</h2>
             <p>{category.subhead}</p>
           </div>

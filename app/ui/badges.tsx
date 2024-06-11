@@ -27,7 +27,7 @@ const SOFTWARE_BADGE: BadgeProps = {
 
 const FRONTEND_BADGE: BadgeProps = {
   text: "Frontend Engineer",
-  color: "bg-sky-300",
+  color: "bg-sky-600",
 };
 
 const QA_BADGE: BadgeProps = {

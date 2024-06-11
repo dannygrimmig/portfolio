@@ -1,10 +1,11 @@
 "use client";
 
 import * as React from "react";
-import { BADGE_MAP } from "./badges";
-import { RightSplit, SplitPage } from "./splitpage";
-import { CategoryGrid } from "./categories";
-import { Category } from "../lib/categories";
+import { BADGE_MAP } from "../badges";
+import { SplitPageLayout } from "./SplitPageLayout";
+import { CategoryGrid } from "../categories";
+import { Category } from "../../lib/definitions";
+import { RightSplit } from "./RightSplit";
 
 type SplitPageContainerProps = {
   initialActive?: Category;
@@ -28,7 +29,7 @@ export function SplitPageContainer(props: SplitPageContainerProps) {
   >(initialActive);
 
   return (
-    <SplitPage
+    <SplitPageLayout
       left={
         <CategoryGrid
           activeCategory={activeProject}

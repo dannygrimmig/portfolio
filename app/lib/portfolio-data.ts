@@ -6,16 +6,7 @@ import movieimage from "../../public/movie-graph.png";
 import componentimage from "../../public/component-image.webp";
 import financeimage from "../../public/financial-portfolio.png";
 import workoutimage from "../../public/workout-app.png";
-import { Category } from "./categories";
-
-export type PORTFOLIO_PROJECT =
-  | "edu"
-  | "component"
-  | "prospect"
-  | "feed"
-  | "workout"
-  | "finance"
-  | "movie";
+import { Category } from "./definitions";
 
 // TOAST
 const PRODUCT_EDU: Category = {
@@ -113,16 +104,6 @@ const MOVIE_GRAPH: Category = {
   badges: [BADGE_MAP.html, BADGE_MAP.css, BADGE_MAP.js],
   imageBadge: BADGE_MAP.colgate,
   link: "https://dannygrimmig.github.io/DataViz-MovieGraph/",
-};
-
-export const PORTFOLIO_MAP: Record<PORTFOLIO_PROJECT, Category> = {
-  edu: PRODUCT_EDU,
-  component: COMPONENT_LIB,
-  prospect: PROSPECT_MIGRATION,
-  feed: FEED_DEVELOPMENT,
-  workout: WORKOUT_APP,
-  finance: FINANCIAL_PORTFOLIO,
-  movie: MOVIE_GRAPH,
 };
 
 export const PORTFOLIO_PROJECTS = [

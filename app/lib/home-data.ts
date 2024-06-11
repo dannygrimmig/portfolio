@@ -2,18 +2,16 @@ import { BADGE_MAP } from "../ui/badges";
 import profileimage from "../../public/profile.png";
 import colgateimage from "../../public/colgate-image.jpeg";
 import toastimage from "../../public/toast-image.png";
-import { Category } from "./categories";
-
-export type HOME_CATEGORY = "main" | "colgate" | "toast";
+import nextimage from "../../public/next_insurance.png";
+import { Category } from "./definitions";
 
 const MAIN_CATEGORY: Category = {
   key: "main",
   title: "Danny Grimmig",
   subhead: "",
   image: profileimage,
-  text: "Hello! Welcome to a quick site where I threw together a little about me, including my experience and projects!",
+  text: "Hello! Welcome to my website - click around to get a view into some of my experiences and favorite projects!",
   badges: [BADGE_MAP.software],
-  className: "col-span-1 md:row-span-2",
 };
 
 const COLGATE_CATEGORY: Category = {
@@ -31,17 +29,21 @@ const TOAST_CATEGORY: Category = {
   subhead: "Software Engineer",
   image: toastimage,
   text: "I joined the eCommerce Engineering team as an Engineering Intern, before progressing to a full-time Frontend Software Engineer postiion. I had the exciting opportunity to spearhead customer facing initiatives, including product education pages, component librarys, and scaffolding new eCommerce flows.",
-  badges: [BADGE_MAP.qa, BADGE_MAP.fe],
+  badges: [BADGE_MAP.qa, BADGE_MAP.software],
 };
 
-export const HOME_CATEGORIES_MAP: Record<HOME_CATEGORY, Category> = {
-  main: MAIN_CATEGORY,
-  colgate: COLGATE_CATEGORY,
-  toast: TOAST_CATEGORY,
+const NEXT_CATEGORY: Category = {
+  key: "next",
+  title: "NEXT Insurance",
+  subhead: "Frontend Software Engineer",
+  image: nextimage,
+  text: "Joining NEXT Insurance as a Frontend Software Engineer!",
+  badges: [BADGE_MAP.software, BADGE_MAP.fe],
 };
 
 export const HOME_CATEGORIES = [
   MAIN_CATEGORY,
   COLGATE_CATEGORY,
   TOAST_CATEGORY,
+  NEXT_CATEGORY,
 ];

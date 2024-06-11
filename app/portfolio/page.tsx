@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { SplitPageContainer } from "../ui/portfolio";
+import { SplitPageContainer } from "../ui/pages/SplitPageContainer";
 import { PORTFOLIO_PROJECTS } from "../lib/portfolio-data";
 
 export const metadata: Metadata = {
