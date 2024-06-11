@@ -3,7 +3,7 @@ import feedimage from "../../public/images/portfolio/feed-app.png";
 import eduimage from "../../public/images/portfolio/edu-page.png";
 import prospectimage from "../../public/images/portfolio/prospect-migration.png";
 import movieimage from "../../public/images/portfolio/movie-graph.png";
-import componentimage from "../../public/images/portfolio/storybook.png";
+import storybook from "../../public/images/portfolio/storybook.png";
 import financeimage from "../../public/images/portfolio/financial-portfolio.png";
 import workoutimage from "../../public/images/portfolio/workout-app.png";
 import { Category } from "./definitions";
@@ -24,7 +24,7 @@ const COMPONENT_LIB: Category = {
   key: "component",
   title: "eCommerce Component Library",
   subhead: "Improved Developer Efficiency",
-  image: componentimage,
+  image: storybook,
   text: "Turned Figma files for the internal marketing design system into a component library with 25+ net new component. Components were created with a user centric and accessibility first mindset, comforming to WCAG 2.0 guidlines. Improved developer efficiency with DRY code.",
   badges: [
     BADGE_MAP.react,
