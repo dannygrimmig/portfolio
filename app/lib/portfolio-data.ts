@@ -1,11 +1,11 @@
 import { BADGE_MAP, BadgeProps } from "../ui/badges";
-import feedimage from "../../public/feed-app.png";
-import eduimage from "../../public/edu-page.png";
-import prospectimage from "../../public/prospect-migration.png";
-import movieimage from "../../public/movie-graph.png";
-import componentimage from "../../public/component-image.webp";
-import financeimage from "../../public/financial-portfolio.png";
-import workoutimage from "../../public/workout-app.png";
+import feedimage from "../../public/images/portfolio/feed-app.png";
+import eduimage from "../../public/images/portfolio/edu-page.png";
+import prospectimage from "../../public/images/portfolio/prospect-migration.png";
+import movieimage from "../../public/images/portfolio/movie-graph.png";
+import componentimage from "../../public/images/portfolio/storybook.png";
+import financeimage from "../../public/images/portfolio/financial-portfolio.png";
+import workoutimage from "../../public/images/portfolio/workout-app.png";
 import { Category } from "./definitions";
 
 // TOAST

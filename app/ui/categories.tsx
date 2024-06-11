@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Badge } from "./badges";
 import { Category } from "../lib/definitions";
-import emptyimage from "../../public/elementor-placeholder-image.webp";
+import emptyimage from "../../public/images/elementor-placeholder-image.webp";
 
 type CategoryGridProps = {
   activeCategory?: Category;
