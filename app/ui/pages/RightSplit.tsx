@@ -26,7 +26,27 @@ export function RightSplit(props: RightSplit) {
             </li>
           ))}
         </ul>
-        <h1 className="text-6xl">{title}</h1>
+
+        <div className="flex flex-col gap-2">
+          <h1 className="text-6xl">{title}</h1>
+          {title === "Danny Grimmig" && (
+            <ul className="flex gap-4 decoration-1 underline underline-offset-2">
+              <li>
+                <Link
+                  href="https://www.linkedin.com/in/danny-grimmig"
+                  target="_blank"
+                >
+                  linkedin
+                </Link>
+              </li>
+              <li>
+                <Link href="mailto:dannygrimmig17@gmail.com?subject=&#128075;Hey Danny!">
+                  email
+                </Link>
+              </li>
+            </ul>
+          )}
+        </div>
       </div>
 
       <Typewriter text={text} />
