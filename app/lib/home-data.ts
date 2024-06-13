@@ -12,6 +12,7 @@ const MAIN_CATEGORY: Category = {
   image: profileimage,
   text: "Hello! Welcome to my website - click around to get a view into my experiences and favorite projects!",
   badges: [BADGE_MAP.software],
+  className: "md:row-span-2",
 };
 
 const COLGATE_CATEGORY: Category = {
@@ -45,5 +46,5 @@ export const HOME_CATEGORIES = [
   MAIN_CATEGORY,
   COLGATE_CATEGORY,
   TOAST_CATEGORY,
-  NEXT_CATEGORY,
+  // NEXT_CATEGORY,
 ];
