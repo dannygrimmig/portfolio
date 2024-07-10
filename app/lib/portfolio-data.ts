@@ -6,6 +6,7 @@ import movieimage from "../../public/images/portfolio/movie-graph.png";
 import storybook from "../../public/images/portfolio/storybook_components.png";
 import financeimage from "../../public/images/portfolio/financial-portfolio.png";
 import workoutimage from "../../public/images/portfolio/workout-app.png";
+import golfrangefinderimage from "../../public/images/portfolio/golf-range-finder.jpg";
 import { Category } from "./definitions";
 
 // TOAST
@@ -49,6 +50,33 @@ const PROSPECT_MIGRATION: Category = {
 };
 
 // PERSONAL
+const WORKOUT_APP: Category = {
+  key: "workout",
+  title: "The Logs",
+  subhead: "Full Stack Workout Tracker",
+  image: workoutimage,
+  text: "Workout tracking application with the ablity to log exercises, see history, and track trends with analitics. Mobile first design and a comprehensive design to take on the go.",
+  badges: [
+    BADGE_MAP.react,
+    BADGE_MAP.ts,
+    BADGE_MAP.next,
+    BADGE_MAP.postgresql,
+    BADGE_MAP.auth,
+  ],
+  imageBadge: BADGE_MAP.personal,
+  link: "https://workout-app-one-self.vercel.app/",
+};
+
+const GOLF_RANGE_FINDER: Category = {
+  key: "golfrangefinder",
+  title: "Green Retriever",
+  subhead: "Golf Range Finder",
+  image: golfrangefinderimage,
+  text: "Mobile Application, soon availiable in iOS App Store, that gives players accurate distances to each green, with a minimalistic UI that keeps their focus on the game",
+  badges: [BADGE_MAP.reactnative, BADGE_MAP.ios, BADGE_MAP.expo],
+  imageBadge: BADGE_MAP.personal,
+};
+
 const FEED_DEVELOPMENT: Category = {
   key: "feed",
   title: "Feed Application",
@@ -65,17 +93,6 @@ const FEED_DEVELOPMENT: Category = {
   ],
   imageBadge: BADGE_MAP.personal,
   link: "https://feed-development.web.app/",
-};
-
-const WORKOUT_APP: Category = {
-  key: "workout",
-  title: "The Logs",
-  subhead: "Full Stack Workout Tracker",
-  image: workoutimage,
-  text: "Current Project! Working on a full stack workout tracking app using Next.JS and PostgreSQL. The end goal is for authentication, post workouts, view historic workouts, and see data analytics on your progression.",
-  badges: [BADGE_MAP.react, BADGE_MAP.ts, BADGE_MAP.next, BADGE_MAP.postgresql],
-  imageBadge: BADGE_MAP.personal,
-  link: "https://workout-app-one-self.vercel.app/",
 };
 
 const FINANCIAL_PORTFOLIO: Category = {
@@ -110,8 +127,9 @@ export const PORTFOLIO_PROJECTS = [
   PRODUCT_EDU,
   COMPONENT_LIB,
   PROSPECT_MIGRATION,
-  FEED_DEVELOPMENT,
   WORKOUT_APP,
+  GOLF_RANGE_FINDER,
+  FEED_DEVELOPMENT,
   FINANCIAL_PORTFOLIO,
   MOVIE_GRAPH,
 ];

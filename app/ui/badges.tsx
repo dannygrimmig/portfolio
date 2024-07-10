@@ -145,6 +145,21 @@ const POSTGRESQL_BADGE: BadgeProps = {
   color: "bg-orange-300",
 };
 
+const REACT_NATIVE_BADGE: BadgeProps = {
+  text: "React Native",
+  color: "bg-green-300",
+};
+
+const IOS_BADGE: BadgeProps = {
+  text: "iOS",
+  color: "bg-blue-300",
+};
+
+const EXPO_CLI_BADGE: BadgeProps = {
+  text: "Expo CLI",
+  color: "bg-slate-300",
+};
+
 type BADGES =
   | "toast"
   | "software"
@@ -171,7 +186,10 @@ type BADGES =
   | "localstorage"
   | "context"
   | "next"
-  | "postgresql";
+  | "postgresql"
+  | "reactnative"
+  | "ios"
+  | "expo";
 
 export const BADGE_MAP: Record<BADGES, BadgeProps> = {
   toast: TOAST_BADGE,
@@ -200,4 +218,7 @@ export const BADGE_MAP: Record<BADGES, BadgeProps> = {
   context: CONTEXT_API_BADGE,
   next: NEXT_BADGE,
   postgresql: POSTGRESQL_BADGE,
+  reactnative: REACT_NATIVE_BADGE,
+  ios: IOS_BADGE,
+  expo: EXPO_CLI_BADGE,
 };
