@@ -28,7 +28,7 @@ export function CategoryCard(props: CategoryCardProps) {
     <button
       onClick={onClick}
       className={`relative p-4 text-left ${
-        isPrimaryCard ? "min-h-60" : "min-h-80"
+        isPrimaryCard ? "min-h-60" : "min-h-80 nav-item"
       } ${className} ${
         isActive && "border border-black shadow-black shadow-[2px_2px]"
       }`}

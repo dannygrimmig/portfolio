@@ -2,10 +2,12 @@ import Link from "next/link";
 
 export function Socials() {
   return (
-    <ul className="flex gap-4 decoration-1 underline underline-offset-2">
+    <ul className="flex gap-4">
       {socials.map((social) => (
         <li key={social.title}>
-          <Link href={social.href}>{social.title}</Link>
+          <Link href={social.href}>
+            <p className="nav-item relative">{social.title}</p>
+          </Link>
         </li>
       ))}
     </ul>
