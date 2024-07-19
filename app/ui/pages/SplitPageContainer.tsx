@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { BADGE_MAP } from "../Badges/Badge";
 import { SplitPageLayout } from "./SplitPageLayout";
 import { CategoryGrid } from "../Categories/CategoryCardGrid";
 import { Category } from "../../lib/definitions";
@@ -40,15 +39,7 @@ export function SplitPageContainer(props: SplitPageContainerProps) {
         />
       }
       right={
-        <RightSplit
-          title={activeProject?.title ?? "My Portfolio"}
-          text={
-            activeProject?.text ??
-            "Click through the images to explore some of my favorite projects. It is a collection of both personal projects, as well as professional projects."
-          }
-          badges={activeProject?.badges ?? [BADGE_MAP.software]}
-          link={activeProject?.link}
-        />
+        <RightSplit activeCategory={activeProject} categories={categories} />
       }
     />
   );

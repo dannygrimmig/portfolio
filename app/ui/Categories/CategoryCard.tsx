@@ -27,11 +27,10 @@ export function CategoryCard(props: CategoryCardProps) {
   return (
     <button
       onClick={onClick}
-      className={`relative p-4 text-left ${
-        isPrimaryCard ? "min-h-60" : "min-h-80 nav-item"
-      } ${className} ${
-        isActive && "border border-black shadow-black shadow-[2px_2px]"
-      }`}
+      className={`relative p-4 text-left ${className} 
+         transition-all duration-300 hover:shadow-black hover:shadow-[4px_4px]
+          ${isPrimaryCard ? "min-h-60" : "min-h-80 nav-item"} 
+          ${isActive && "outline outline-black shadow-black shadow-[4px_4px]"}`}
     >
       <div className={`${!isPrimaryCard && "relative h-3/4 mb-2"}`}>
         <Image
