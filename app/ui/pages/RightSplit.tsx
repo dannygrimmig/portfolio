@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { Badge, BadgeProps } from "../badges";
+import { BadgeProps } from "../Badges/Badge";
 import { Typewriter } from "../typing";
-import { Button } from "../buttons";
+import { Button } from "../Button";
+import { Socials } from "../Socials";
+import { BadgesContainer } from "../Badges/BadgesContainer";
 
 type RightSplit = {
   title?: string;
@@ -15,37 +17,14 @@ export function RightSplit(props: RightSplit) {
   return (
     <div className="flex flex-col gap-12 sticky top-[104px]">
       <div className="flex flex-col gap-6">
-        <ul className="flex gap-2 justify-end flex-wrap">
-          {badges.map((badge: BadgeProps, i) => (
-            <li key={i}>
-              <Badge
-                text={badge.text}
-                color={badge.color}
-                className={badge.className}
-              />
-            </li>
-          ))}
-        </ul>
+        <BadgesContainer
+          badges={badges}
+          className="flex gap-2 justify-end flex-wrap"
+        />
 
         <div className="flex flex-col gap-2">
           <h1 className="text-6xl">{title}</h1>
-          {title === "Danny Grimmig" && (
-            <ul className="flex gap-4 decoration-1 underline underline-offset-2">
-              <li>
-                <Link
-                  href="https://www.linkedin.com/in/danny-grimmig"
-                  target="_blank"
-                >
-                  linkedin
-                </Link>
-              </li>
-              <li>
-                <Link href="mailto:dannygrimmig17@gmail.com?subject=&#128075;Hey Danny!">
-                  email
-                </Link>
-              </li>
-            </ul>
-          )}
+          {title === "Danny Grimmig" && <Socials />}
         </div>
       </div>
 

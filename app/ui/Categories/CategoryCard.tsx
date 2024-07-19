@@ -1,40 +1,7 @@
 import Image from "next/image";
-import { Badge } from "./badges";
-import { Category } from "../lib/definitions";
-import emptyimage from "../../public/images/elementor-placeholder-image.webp";
-
-type CategoryGridProps = {
-  activeCategory?: Category;
-  categories: Category[];
-  onCategoryChange: (project: Category) => void;
-  className?: string;
-  cardType?: "primary" | "secondary";
-};
-
-export function CategoryGrid(props: CategoryGridProps) {
-  const {
-    activeCategory,
-    categories,
-    onCategoryChange,
-    className = "",
-    cardType,
-  } = props;
-
-  return (
-    <div className={`w-full min-h-[calc(100vh-74px)] ${className}`}>
-      {categories.map((category) => (
-        <CategoryCard
-          key={category.key}
-          isActive={category.key === activeCategory?.key}
-          className={category.className}
-          onClick={() => onCategoryChange(category)}
-          category={category}
-          cardType={cardType}
-        />
-      ))}
-    </div>
-  );
-}
+import emptyimage from "../../../public/images/elementor-placeholder-image.webp";
+import { Badge } from "../Badges/Badge";
+import { Category } from "../../lib/definitions";
 
 type CategoryCardProps = {
   isActive: boolean;
@@ -44,7 +11,7 @@ type CategoryCardProps = {
   cardType?: "primary" | "secondary";
 };
 
-function CategoryCard(props: CategoryCardProps) {
+export function CategoryCard(props: CategoryCardProps) {
   // imported
   const {
     isActive,

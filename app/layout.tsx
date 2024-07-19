@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { NavBar } from "./ui/nav";
+import { NavBar } from "./ui/NavBar";
 import { Analytics } from "@vercel/analytics/react";
+import { BASE_META_DATA } from "./lib/metadata";
+import "./globals.css";
 
-export const metadata: Metadata = {
-  title: {
-    template: "%s | Danny Grimmig",
-    default: "Danny Grimmig",
-  },
-  description: "welcome to my portfolio site.",
-};
+export const metadata: Metadata = BASE_META_DATA;
 
 export default function RootLayout({
   children,

@@ -1,4 +1,4 @@
-import { BADGE_MAP } from "../ui/badges";
+import { BADGE_MAP } from "../ui/Badges/Badge";
 import profileimage from "../../public/images/home/profile.png";
 import colgateimage from "../../public/images/home/colgate-image.jpeg";
 import toastimage from "../../public/images/home/toast-image.png";

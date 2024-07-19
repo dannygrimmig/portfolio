@@ -1,4 +1,4 @@
-import { BADGE_MAP, BadgeProps } from "../ui/badges";
+import { BADGE_MAP, BadgeProps } from "../ui/Badges/Badge";
 import feedimage from "../../public/images/portfolio/feed-app.png";
 import eduimage from "../../public/images/portfolio/edu-page.png";
 import prospectimage from "../../public/images/portfolio/prospect-migration.png";
