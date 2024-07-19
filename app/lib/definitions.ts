@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import { BadgeProps } from "../ui/badges";
+import { BadgeProps } from "../ui/Badges/Badge";
 
 export type Category = {
   key: string;

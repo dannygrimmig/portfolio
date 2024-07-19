@@ -1,9 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { BADGE_MAP } from "../badges";
+import { BADGE_MAP } from "../Badges/Badge";
 import { SplitPageLayout } from "./SplitPageLayout";
-import { CategoryGrid } from "../categories";
+import { CategoryGrid } from "../Categories/CategoryCardGrid";
 import { Category } from "../../lib/definitions";
 import { RightSplit } from "./RightSplit";
 
