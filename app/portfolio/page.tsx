@@ -10,7 +10,8 @@ export default function Page() {
   return (
     <SplitPageContainer
       categories={PORTFOLIO_PROJECTS}
-      gridClassName="grid md:grid-cols-2 gap-4 p-4"
+      initialActive={PORTFOLIO_PROJECTS[0]}
+      gridClassName="grid md:grid-cols-3 gap-4 p-4"
       cardType="secondary"
     />
   );

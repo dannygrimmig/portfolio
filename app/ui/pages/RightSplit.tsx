@@ -27,6 +27,7 @@ export function RightSplit(props: RightSplit) {
       );
       const activeElement = categoryRefs.current[activeIndex];
       if (activeElement) {
+        console.log("scroll");
         activeElement.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
