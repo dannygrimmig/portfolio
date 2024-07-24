@@ -27,13 +27,12 @@ export function CategoryCard(props: CategoryCardProps) {
   return (
     <button
       onClick={onClick}
-      className={`relative p-4 text-left ${
-        isPrimaryCard ? "min-h-60" : "min-h-80 nav-item"
-      } ${className} ${
-        isActive && "border border-black shadow-black shadow-[2px_2px]"
-      }`}
+      className={`relative text-left ${isPrimaryCard && "p-4"} ${className} 
+         transition-all duration-300 hover:shadow-black hover:shadow-[4px_4px]
+          ${isPrimaryCard ? "min-h-60" : "min-h-40 sm:min-h-auto nav-item"} 
+          ${isActive && "outline outline-black shadow-black shadow-[4px_4px]"}`}
     >
-      <div className={`${!isPrimaryCard && "relative h-3/4 mb-2"}`}>
+      <div className={`${!isPrimaryCard && " mb-2"}`}>
         <Image
           src={category.image ?? emptyimage}
           alt=""
@@ -54,14 +53,16 @@ export function CategoryCard(props: CategoryCardProps) {
             />
           )}
 
-          <div
-            className={`${
-              isPrimaryCard && "absolute bottom-2 left-2"
-            } px-2 py-1 backdrop-blur-[2px] border border-black shadow-black shadow-[2px_2px]`}
-          >
-            <h2 className="text-xl font-bold">{category.title}</h2>
-            <p>{category.subhead}</p>
-          </div>
+          {isPrimaryCard && (
+            <div
+              className={`${
+                isPrimaryCard && "absolute bottom-2 left-2"
+              } px-2 py-1 backdrop-blur-[2px] border border-black shadow-black shadow-[2px_2px]`}
+            >
+              <h2 className="text-xl font-bold">{category.title}</h2>
+              <p>{category.subhead}</p>
+            </div>
+          )}
         </>
       )}
     </button>
