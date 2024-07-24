@@ -38,7 +38,9 @@ export function RightSplit(props: RightSplit) {
       {props.categories.map((category, index) => (
         <div
           key={category.key}
-          ref={(el) => (categoryRefs.current[index] = el)}
+          ref={(el) => {
+            categoryRefs.current[index] = el;
+          }}
           className="snap-start min-h-full p-4 border-[.5px] border-black"
         >
           <div className="flex flex-col gap-12">
