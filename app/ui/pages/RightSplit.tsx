@@ -6,6 +6,7 @@ import { Button } from "../Button";
 import { Socials } from "../Socials";
 import { BadgesContainer } from "../Badges/BadgesContainer";
 import { Category } from "@/app/lib/definitions";
+import useIsMobile from "@/app/lib/hooks/useIsMobile";
 
 type RightSplit = {
   activeCategory?: Category;
@@ -18,6 +19,7 @@ export function RightSplit(props: RightSplit) {
 
   // managed
   const categoryRefs = React.useRef<(HTMLDivElement | null)[]>([]);
+  const isMobile = useIsMobile();
 
   // Function to set the ref for each category
   React.useEffect(() => {
@@ -26,12 +28,11 @@ export function RightSplit(props: RightSplit) {
         (category) => category.key === activeCategory.key
       );
       const activeElement = categoryRefs.current[activeIndex];
-      if (activeElement) {
-        console.log("scroll");
+      if (activeElement && !isMobile) {
         activeElement.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
-  }, [activeCategory, categories]);
+  }, [activeCategory, categories, isMobile]);
 
   return (
     <div className="bg-sky-100 sm:h-[calc(100vh-74px)] overflow-y-scroll hide-scrollbar">
