@@ -6,7 +6,7 @@ export function Socials() {
       {socials.map((social) => (
         <li key={social.title}>
           <Link href={social.href}>
-            <p className="nav-item relative">{social.title}</p>
+            <p className="nav-item relative text-sm">{social.title}</p>
           </Link>
         </li>
       ))}
