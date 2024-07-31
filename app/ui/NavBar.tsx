@@ -31,8 +31,8 @@ export function NavBar() {
         <Link href={"https://www.blog.dannygrimmig.com/"} target="_blank">
           <Badge
             text="Digital Garden"
-            className="text-xs text-white hover:text-gray-800"
-            color="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 hover:from-pink-500 hover:to-yellow-500 transition duration-300 ease-in-out"
+            className="text-xs text-white hover:text-transparent"
+            color="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 hover:bg-clip-text transition duration-300 ease-in-out background-animate"
           />
         </Link>
       </div>
