@@ -28,7 +28,7 @@ export function NavBar() {
           ))}
         </ul>
 
-        <Link href={"https://www.garden.dannygrimmig.com/"} target="_blank">
+        <Link href={"https://www.blog.dannygrimmig.com/"} target="_blank">
           <Badge
             text="Digital Garden"
             className="text-xs text-white hover:text-transparent"
