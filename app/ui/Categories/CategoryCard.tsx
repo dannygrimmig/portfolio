@@ -37,7 +37,7 @@ export function CategoryCard(props: CategoryCardProps) {
           src={category.image ?? emptyimage}
           alt=""
           fill
-          className="object-cover sm:object-bottom"
+          className="object-cover"
           blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
           placeholder="blur"
         />
