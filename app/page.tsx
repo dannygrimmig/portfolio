@@ -7,7 +7,7 @@ export default function Home() {
     <SplitPageContainer
       initialActive={HOME_CATEGORIES[0]}
       categories={HOME_CATEGORIES}
-      gridClassName="grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 p-4 gap-4 text-white"
+      gridClassName="grid grid-cols-1 grid-rows-3 md:grid-cols-12 md:grid-rows-2 p-4 gap-4 text-white"
     />
   );
 }

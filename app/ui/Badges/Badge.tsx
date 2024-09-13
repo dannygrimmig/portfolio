@@ -30,6 +30,11 @@ const FRONTEND_BADGE: BadgeProps = {
   color: "bg-sky-600",
 };
 
+const BACKEND_BADGE: BadgeProps = {
+  text: "Backend Engineer",
+  color: "bg-slate-200",
+};
+
 const QA_BADGE: BadgeProps = {
   text: "QA Engineer Intern",
   color: "bg-orange-400",
@@ -164,6 +169,7 @@ type BADGES =
   | "toast"
   | "software"
   | "fe"
+  | 'be'
   | "qa"
   | "cs"
   | "econ"
@@ -194,6 +200,7 @@ type BADGES =
 export const BADGE_MAP: Record<BADGES, BadgeProps> = {
   toast: TOAST_BADGE,
   fe: FRONTEND_BADGE,
+  be: BACKEND_BADGE,
   qa: QA_BADGE,
   cs: CS_BADGE,
   econ: ECON_BADGE,
