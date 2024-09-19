@@ -6,11 +6,14 @@ import Image from "next/image";
 import { Badge } from "./Badges/Badge";
 import { Category } from "../lib/definitions";
 import Link from "next/link";
-import { Typewriter } from "./typing";
 
-export function PortfolioCard({ category }: { category: Category }) {
-  const [isOpen, setIsOpen] = React.useState(false);
-
+export function PortfolioCard({
+  category,
+  onDetailClick,
+}: {
+  category: Category;
+  onDetailClick: () => void;
+}) {
   return (
     <div className="border border-black flex flex-col relative">
       <figure className="relative h-60 border-b border-black">
@@ -59,21 +62,12 @@ export function PortfolioCard({ category }: { category: Category }) {
 
           <button
             className="border border-black p-4 flex-2 flex items-center justify-center gap-2 hover:bg-slate-200"
-            onClick={() => setIsOpen(true)}
+            onClick={onDetailClick}
           >
             View Details
           </button>
         </div>
       </div>
-
-      {isOpen && (
-        <div
-          className="absolute w-full h-full bg-white opacity-90 flex flex-col p-4"
-          onClick={() => setIsOpen(false)}
-        >
-          <Typewriter text={category.text ?? ""} />
-        </div>
-      )}
     </div>
   );
 }
