@@ -1,4 +1,5 @@
-import { BADGE_MAP, BadgeProps } from "../ui/Badges/Badge";
+import { BADGE_MAP } from "../ui/Badges/Badge";
+import emptyimage from "../../public/images/elementor-placeholder-image.webp";
 import feedimage from "../../public/images/portfolio/feed-app.png";
 import eduimage from "../../public/images/portfolio/edu-page.png";
 import prospectimage from "../../public/images/portfolio/prospect-migration.png";
@@ -8,6 +9,17 @@ import financeimage from "../../public/images/portfolio/financial-portfolio.png"
 import workoutimage from "../../public/images/portfolio/workout-app.png";
 import golfrangefinderimage from "../../public/images/portfolio/golf-range-finder.jpg";
 import { Category } from "./definitions";
+
+// NEXT
+const FUNNEL_ACCESSIBILITY: Category = {
+  key: "acc",
+  title: "Funnel Web Accessibility",
+  subhead: "",
+  image: emptyimage,
+  text: "Refactored pages, components, and added e2e tests adhering to WCAG standards.",
+  badges: [BADGE_MAP.angular, BADGE_MAP.cypress, BADGE_MAP.wcag],
+  imageBadge: BADGE_MAP.NEXT,
+};
 
 // TOAST
 const PRODUCT_EDU: Category = {
@@ -124,6 +136,7 @@ const MOVIE_GRAPH: Category = {
 };
 
 export const PORTFOLIO_PROJECTS = [
+  FUNNEL_ACCESSIBILITY,
   PRODUCT_EDU,
   COMPONENT_LIB,
   PROSPECT_MIGRATION,
