@@ -165,11 +165,31 @@ const EXPO_CLI_BADGE: BadgeProps = {
   color: "bg-slate-300",
 };
 
+const NEXT_INSURANCE_BADGE: BadgeProps = {
+  text: "NEXT",
+  color: "bg-blue-500",
+};
+
+const WHOOP_BADGE: BadgeProps = {
+  text: "WHOOP",
+  color: "bg-slate-400",
+};
+
+const ANGULAR_BADGE: BadgeProps = {
+  text: "Angular",
+  color: "bg-red-400",
+};
+
+const CYPRESS_BADGE: BadgeProps = {
+  text: "Cypress e2e",
+  color: "bg-blue-400",
+};
+
 type BADGES =
   | "toast"
   | "software"
   | "fe"
-  | 'be'
+  | "be"
   | "qa"
   | "cs"
   | "econ"
@@ -195,7 +215,11 @@ type BADGES =
   | "postgresql"
   | "reactnative"
   | "ios"
-  | "expo";
+  | "expo"
+  | "NEXT"
+  | "WHOOP"
+  | "angular"
+  | "cypress";
 
 export const BADGE_MAP: Record<BADGES, BadgeProps> = {
   toast: TOAST_BADGE,
@@ -228,4 +252,8 @@ export const BADGE_MAP: Record<BADGES, BadgeProps> = {
   reactnative: REACT_NATIVE_BADGE,
   ios: IOS_BADGE,
   expo: EXPO_CLI_BADGE,
+  NEXT: NEXT_INSURANCE_BADGE,
+  WHOOP: WHOOP_BADGE,
+  angular: ANGULAR_BADGE,
+  cypress: CYPRESS_BADGE,
 };
