@@ -58,8 +58,8 @@ function FilterButton({
 }) {
   return (
     <button
-      className={`p-2 border border-black text-xs ${
-        isActive ? badge.color : "bg-gray-200"
+      className={`p-2 border border-black text-xs  ${
+        isActive ? badge.color : "bg-slate-100 hover:bg-slate-200"
       }`}
       onClick={onClick}
     >

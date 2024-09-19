@@ -1,5 +1,5 @@
 import { BADGE_MAP } from "../ui/Badges/Badge";
-import emptyimage from "../../public/images/elementor-placeholder-image.webp";
+import nextaccessibilityimage from "../../public/images/portfolio/next-accessibility.png";
 import feedimage from "../../public/images/portfolio/feed-app.png";
 import eduimage from "../../public/images/portfolio/edu-page.png";
 import prospectimage from "../../public/images/portfolio/prospect-migration.png";
@@ -15,7 +15,7 @@ const FUNNEL_ACCESSIBILITY: Category = {
   key: "acc",
   title: "Funnel Web Accessibility",
   subhead: "",
-  image: emptyimage,
+  image: nextaccessibilityimage,
   text: "Refactored pages, components, and added e2e tests adhering to WCAG standards.",
   badges: [BADGE_MAP.angular, BADGE_MAP.cypress, BADGE_MAP.wcag],
   imageBadge: BADGE_MAP.NEXT,

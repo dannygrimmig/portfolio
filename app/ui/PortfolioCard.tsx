@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Badge } from "./Badges/Badge";
 import { Category } from "../lib/definitions";
 import Link from "next/link";
+import { Typewriter } from "./typing";
 
 export function PortfolioCard({ category }: { category: Category }) {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -44,21 +45,20 @@ export function PortfolioCard({ category }: { category: Category }) {
 
         <div className="flex gap-4 mt-auto">
           <Link
-            className={`p-4 ${
-              !!category.link
-                ? "bg-slate-950 text-white"
-                : "bg-slate-400 text-gray-500"
-            } mt-auto flex justify-center flex-1 border border-black`}
+            className={`p-4 bg-slate-950 text-white mt-auto flex justify-center flex-1 border border-black ${
+              !category.link && "opacity-30 pointer-events-none"
+            }`}
             href={category.link ?? "#"}
             rel="norefferer noopener"
+            target="_blank"
           >
             <button disabled={!category.link} className="text-center">
-              {category.link ? "Check it out" : "Private Project"}
+              {category.link ? "Check it out" : "Private"}
             </button>
           </Link>
 
           <button
-            className="border border-black p-4 flex-2 flex items-center justify-center gap-2"
+            className="border border-black p-4 flex-2 flex items-center justify-center gap-2 hover:bg-slate-200"
             onClick={() => setIsOpen(true)}
           >
             View Details
@@ -71,7 +71,7 @@ export function PortfolioCard({ category }: { category: Category }) {
           className="absolute w-full h-full bg-white opacity-90 flex flex-col p-4"
           onClick={() => setIsOpen(false)}
         >
-          <p>{category.text}</p>
+          <Typewriter text={category.text ?? ""} />
         </div>
       )}
     </div>
