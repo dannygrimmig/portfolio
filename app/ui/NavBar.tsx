@@ -14,7 +14,7 @@ export function NavBar() {
       </Link>
 
       <div className="flex-1 flex justify-between items-center">
-        <ul className="flex gap-4 gap-8 self-end">
+        <ul className="flex gap-8 self-end">
           {LINKS.map((link) => (
             <Link key={link} href={`/${link}`}>
               <p
