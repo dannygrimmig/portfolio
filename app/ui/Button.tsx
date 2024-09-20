@@ -9,7 +9,7 @@ export function Button(props: ButtonProps) {
   return (
     <h3
       className={`px-6 py-3 rounded-md border border-black w-max ${
-        type === "primary" && "bg-sky-600 text-white"
+        type === "primary" && "bg-sky-600 hover:bg-sky-700 text-white"
       }`}
     >
       {text}

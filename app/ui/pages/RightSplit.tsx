@@ -59,17 +59,19 @@ export function RightSplit(props: RightSplit) {
 
             <Typewriter text={category.text ?? ""} />
 
-            <div className="flex gap-2">
-              <Link
-                href={category.link ?? "/portfolio"}
-                rel="norefferer noopener"
-              >
-                <Button
-                  type="primary"
-                  text={category.link ? "Check it out!" : "portfolio"}
-                />
-              </Link>
-            </div>
+            {category?.key === "main" && (
+              <div className="flex gap-2">
+                <Link
+                  href={category.link ?? "/portfolio"}
+                  rel="norefferer noopener"
+                >
+                  <Button
+                    type="primary"
+                    text={category.link ? "Check it out!" : "portfolio"}
+                  />
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       ))}

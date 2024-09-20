@@ -106,7 +106,7 @@ const API_BADGE: BadgeProps = {
 };
 
 const COLGATE_BADGE: BadgeProps = {
-  text: "Colgate University",
+  text: "Colgate",
   color: "bg-red-400",
 };
 
@@ -166,7 +166,7 @@ const EXPO_CLI_BADGE: BadgeProps = {
 };
 
 const NEXT_INSURANCE_BADGE: BadgeProps = {
-  text: "NEXT",
+  text: "Next Insurance",
   color: "bg-blue-500",
 };
 

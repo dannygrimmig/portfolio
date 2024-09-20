@@ -124,6 +124,7 @@ const FINANCIAL_PORTFOLIO: Category = {
   link: "https://github.com/dannygrimmig",
 };
 
+// COLGATE
 const MOVIE_GRAPH: Category = {
   key: "movie",
   title: "Movie Graph",
@@ -134,6 +135,13 @@ const MOVIE_GRAPH: Category = {
   imageBadge: BADGE_MAP.colgate,
   link: "https://dannygrimmig.github.io/DataViz-MovieGraph/",
 };
+
+/*
+scroll game
+degrees of seperation
+food blog w/ nico
+matchstick ai game
+*/
 
 export const PORTFOLIO_PROJECTS = [
   FUNNEL_ACCESSIBILITY,

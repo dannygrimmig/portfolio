@@ -8,6 +8,7 @@ import { Badge, BADGE_MAP, BadgeProps } from "../ui/Badges/Badge";
 import Image from "next/image";
 import emptyimage from "../../public/images/elementor-placeholder-image.webp";
 import Link from "next/link";
+import { Button } from "../ui/Button/Button";
 
 export default function Page() {
   const categories = PORTFOLIO_PROJECTS;
@@ -34,7 +35,7 @@ export default function Page() {
 
   return (
     <main className="p-4 relative">
-      <div className="mb-4 flex gap-4">
+      <div className="mb-4 flex gap-2">
         {company_filters.map((badge) => (
           <FilterButton
             key={badge.text}
@@ -115,24 +116,27 @@ export default function Page() {
           {/* BUTTONS */}
           <div className="flex gap-4 pt-4 border-t border-black">
             <Link
-              className={`p-4 bg-slate-950 text-white mt-auto flex justify-center flex-1 border border-black ${
-                !selectedCategory.link && "opacity-30 pointer-events-none"
+              className={`flex-1 ${
+                !selectedCategory.link && "pointer-events-none"
               }`}
               href={selectedCategory.link ?? "#"}
               rel="norefferer noopener"
               target="_blank"
             >
-              <button disabled={!selectedCategory.link} className="text-center">
-                {selectedCategory.link ? "Check it out" : "Private"}
-              </button>
+              <Button
+                text={selectedCategory.link ? "Check it out" : "Private"}
+                type="primary"
+                className={`w-full ${!selectedCategory.link && "opacity-30"}`}
+                disabled={!selectedCategory.link}
+                onClick={() => {}}
+              />
             </Link>
 
-            <button
-              className="border border-black p-4 flex-2 flex items-center justify-center gap-2 hover:bg-slate-200"
+            <Button
+              text="Close Details"
+              type="secondary"
               onClick={() => setIsSideOpen(false)}
-            >
-              Close Details
-            </button>
+            />
           </div>
         </div>
       </aside>
@@ -152,7 +156,7 @@ function FilterButton({
 }) {
   return (
     <button
-      className={`p-2 border border-black text-xs  ${
+      className={`px-4 py-2 rounded-full border border-black text-xs  ${
         isActive ? badge.color : "bg-slate-100 hover:bg-slate-200"
       }`}
       onClick={onClick}

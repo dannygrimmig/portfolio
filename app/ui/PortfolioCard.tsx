@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Badge } from "./Badges/Badge";
 import { Category } from "../lib/definitions";
 import Link from "next/link";
+import { Button } from "./Button/Button";
 
 export function PortfolioCard({
   category,
@@ -48,24 +49,25 @@ export function PortfolioCard({
 
         <div className="flex gap-4 mt-auto">
           <Link
-            className={`p-4 bg-slate-950 text-white mt-auto flex justify-center flex-1 border border-black ${
-              !category.link && "opacity-30 pointer-events-none"
-            }`}
+            className={`flex-1 ${!category.link && "pointer-events-none"}`}
             href={category.link ?? "#"}
             rel="norefferer noopener"
             target="_blank"
           >
-            <button disabled={!category.link} className="text-center">
-              {category.link ? "Check it out" : "Private"}
-            </button>
+            <Button
+              text={category.link ? "Check it out" : "Private"}
+              type="primary"
+              className={`w-full ${!category.link && "opacity-30"}`}
+              disabled={!category.link}
+              onClick={() => {}}
+            />
           </Link>
 
-          <button
-            className="border border-black p-4 flex-2 flex items-center justify-center gap-2 hover:bg-slate-200"
+          <Button
+            text="View Details"
+            type="secondary"
             onClick={onDetailClick}
-          >
-            View Details
-          </button>
+          />
         </div>
       </div>
     </div>
